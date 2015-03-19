@@ -15,10 +15,10 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "<tr><td><a href='".$row[product_url]."'>".$row[product_name]." ".$row[product_tag]."</a></td></tr><br>";
+        echo "<tr><td><a href='/website/product.php?name=".$row[product_name]."'>".$row[product_name]." ".$row[product_tag]."</a></td></tr><br>";
     }
 } else {
-    echo "0 results";
+    echo "Not found contact us vishal@vounyse.com";
 }
 
 mysqli_close($conn);
