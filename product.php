@@ -20,11 +20,16 @@ $fresult=mysqli_fetch_assoc($fresult);
 $sresult=mysqli_fetch_assoc($sresult);
 $aresult=mysqli_fetch_assoc($aresult);
 
-echo "<table border='1'>";
-echo "<tr><td>Product Name</td><td>product price</td><td>product link</td></tr><br>";
+echo "<table border='1' cellpadding='0' cellspacing='0' width='900px' style='border-collapse:collapse;''>";
+echo "<tr><td><b>Product Name</b></td><td><b>Product Price</b></td><td><b>Product Link</b></td></tr><br>";
 echo "<tr><td>".$fresult[product_name]." ".$fresult[product_tag]."</td><td>".$fresult[product_price]."</td><td><a href='".$fresult[product_url]."' target='_blank'>Flipkart.com</a></td></tr><br>";
 echo "<tr><td>".$sresult[product_name]."</td><td>Rs. ".substr($sresult[product_price],0,-5)."</td><td><a href='".$sresult[product_url]."' target='_blank'>Snapdeal.com</a></td></tr><br>";
 echo "<tr><td>".$aresult[product_name]."</td><td>Rs. ".$aresult[product_price]."</td><td><a href='".$aresult[product_url]."' target='_blank'>Amazon.in</a></td></tr><br>";
 echo "</table>";
 echo $fresult[product_specs];
 ?>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css1.css">
+</head>
+</html>
