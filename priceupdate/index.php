@@ -14,43 +14,30 @@ if($_POST['url']!=""&&$_POST['email']!="")
 mysqli_close($conn);
 }
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>
-PriceUpdate:: Get price Drop alert in your mail box
-</title>
+  <title>SimplyShop.Co.in - Get Instant Price Update Direct In Your MailBox ;)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
-<table>
-<form action="" method="post">
-<tr>
-<td>
-URL
-</td>
-<td>
-:
-</td>
-<td>
-<input type="text" name="url">
-</td>
-</tr>
-<tr>
-<td>
-Email Id
-</td>
-<td>
-:
-</td>
-<td>
-<input type="text" name="email">
-</td>
-</tr>
-<tr>
-<td>
-<input type="submit" value="Submit">
-</td>
-</tr>
-</form>
-</table>
+<div class="container">
+  <h2>Add Your Product Url And Your Email Address</h2>
+  <form role="form" action="" method="post">
+    <div class="form-group">
+      <label for="url">URL:</label>
+      <input type="url" class="form-control" id="url" placeholder="Enter Product Url" name="url">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter Your Email Id" name="email">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
 </body>
 </html>
